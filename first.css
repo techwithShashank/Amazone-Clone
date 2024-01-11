@@ -1,0 +1,46 @@
+.animated-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style for the button link */
+.animated-button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Define the animation effect */
+.animated-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #004a8f;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+body {
+  background-color: #5bffb0;
+}
+/* Add hover effect */
+.animated-button:hover::before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
